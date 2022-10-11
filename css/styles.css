@@ -171,7 +171,7 @@ body {
 }
 
 .header__main {
-  margin: auto;
+  margin: auto 0;
 }
 
 .header__content {
@@ -215,6 +215,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+  margin-bottom: 80px;
 }
 
 .header__stats>span {
