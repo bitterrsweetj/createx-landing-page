@@ -165,27 +165,35 @@
             </div>
             <div class="directions__body">
               <ul class="directions__button-box">
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter="all">All</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn directions__filter-btn--active" type="button"
+                    data-filter="all">All</button>
                 </li>
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter=".marketing">Marketing</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--marketing">Marketing</button>
                 </li>
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter=".management">Management</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--management">Management</button>
                 </li>
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter=".hr">HR & Recruiting</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn" type="button" data-filter=".directions__list-item--hr">HR &
+                    Recruiting</button>
                 </li>
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter=".design">Design</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--design">Design</button>
                 </li>
-                <li class="direction__filter-btn">
-                  <button type="button" data-filter=".development">Development</button>
+                <li class="directions__filter-item">
+                  <button class="directions__filter-btn" type="button"
+                    data-filter=".directions__list-item--development">Development</button>
                 </li>
               </ul>
+
+
               <ul class="directions__list">
-                <li class="directions__list-item">
+                <li class="mix directions__list-item directions__list-item--marketing" data-order="1">
                   <a class="directions__list-link">
                     <div class="directions__image-box">
                       <img src="./images/directions/image-marketing.jpg" alt="">
@@ -198,8 +206,8 @@
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
-                  <a class="directions__list-link">
+                <li class="mix directions__list-item directions__list-item--management" data-order="2">
+                  <a class="directions__list-link ">
                     <div class="directions__image-box">
                       <img src="./images/directions/image-management.jpg" alt="">
                     </div>
@@ -211,7 +219,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
+                <li class="mix directions__list-item directions__list-item--hr" data-order="3">
                   <a class="directions__list-link">
                     <div class="directions__image-box">
                       <img src="./images/directions/image-hr.jpg" alt="">
@@ -224,7 +232,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
+                <li class="mix directions__list-item directions__list-item--design" data-order="4">
                   <a class="directions__list-link">
                     <div class="directions__image-box">
                       <img src="./images/directions/image-design.jpg" alt="">
@@ -237,7 +245,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item">
+                <li class="mix directions__list-item directions__list-item--development" data-order="5">
                   <a class="directions__list-link">
                     <div class="directions__image-box">
                       <img src="./images/directions/image-development.jpg" alt="">
@@ -250,8 +258,8 @@
                     </div>
                   </a>
                 </li>
-                <li class="directions__list-item directions__list-item--empty">
-                  New studying program coming soon...
+                <li class="mix directions__list-item directions__list-item--empty" data-order="6">
+                  <span>New studying program coming soon...</span>
                 </li>
               </ul>
             </div>
