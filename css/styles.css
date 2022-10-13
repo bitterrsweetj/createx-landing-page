@@ -169,7 +169,7 @@ body {
 }
 
 
-/* -------------------------------------------------- */
+/* HEADER */
 
 .header__main,
 .header__stats {
@@ -216,6 +216,7 @@ body {
 .header__title {
   font-size: 64px;
 }
+
 .header__title,
 .header__stats-item span,
 .about__numbers-item span {
@@ -254,13 +255,29 @@ body {
   gap: 12px;
 }
 
-/* ------------------------------------------------- */
+/* ABOUT US */
+
+.about {
+  margin: 180px 0 160px;
+
+}
 
 .about__createx {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 180px;
+  position: relative;
+}
+
+.about__createx::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -180px;
+  width: 100px;
+  height: 85px;
+  background-image: url("../images/background-shapes/shapes-1.svg");
 }
 
 .about__createx-content {
@@ -275,6 +292,7 @@ body {
 .about__text {
   margin-bottom: 60px;
 }
+
 .about__paragraph {
   line-height: 160%;
   color: var(--gray--800);
@@ -293,7 +311,6 @@ body {
   display: flex;
   gap: 24px;
 }
-
 
 .about__values {
   display: flex;
@@ -320,9 +337,16 @@ body {
   align-items: center;
   gap: 16px;
 }
-.about__numbers-item span{
+
+.about__numbers-item span {
   color: var(--primary);
 }
+
+
+/* WHAT DO WE TEACH */
+
+
+
 /* -------------------------------------------------- */
 h2 {
   font-weight: 900;
