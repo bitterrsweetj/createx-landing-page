@@ -351,17 +351,38 @@ body {
 
 /* OUR MAIN DIRECTIONS */
 
-.directions {}
+.directions {
+  margin-bottom: 180px;
+}
 
+.directions__inner {
+  position: relative;
+}
 
-.directions__inner {}
+.directions__inner::before {
+  position: absolute;
+  content: '';
+  top: 30px;
+  left: -220px;
+  width: 136px;
+  height: 115px;
+  background: url('../images/background-shapes/shapes-2.svg') 0 0 no-repeat;
+}
+
+.directions__inner::after {
+  position: absolute;
+  content: '';
+  right: -460px;
+  top:400px;
+  width: 243px;
+  height: 243px;
+  background: url("../images/background-shapes/shapes-3.svg");
+}
 
 .directions__heading {
   margin-bottom: 90px;
   text-align: center;
 }
-
-.directions__body {}
 
 .directions__button-box {
   display: flex;
@@ -399,8 +420,6 @@ body {
   grid-template: repeat(2, auto) / repeat(3, 1fr);
   gap: 30px;
 }
-
-.directions__list-item {}
 
 .directions__list-link {
   display: block;
@@ -476,3 +495,28 @@ body {
 .directions__list-item--empty > span {
   max-width: 240px;
 }
+
+.directions__list-item--marketing .directions__link-tag {
+  background-color: #03CEA4;
+}
+
+.directions__list-item--management .directions__link-tag {
+  background-color: #5A87FC;
+}
+
+.directions__list-item--hr .directions__link-tag {
+  background-color: #F89828;
+}
+
+.directions__list-item--design .directions__link-tag {
+  background-color: #F52F6E;
+}
+
+.directions__list-item--development .directions__link-tag {
+  background-color: #7772F1;
+}
+
+
+/* CERTIFICATE  */
+
+
