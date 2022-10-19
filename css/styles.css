@@ -94,7 +94,8 @@ body {
 }
 
 .main__team {
-  background-color: var(--gray--200);
+  background-color: ;
+  background: url("../images/background-shapes/team-bg.svg") no-repeat, var(--gray--200);
   padding: 166px 0 160px;
 }
 
@@ -576,14 +577,60 @@ body {
 /* =============================================================== */
 /* TEAM */
 /* ================================================================ */
-
-.team__inner {}
-
+.team {
+  
+}
 .team__heading {
   margin-bottom: 60px;
+  position: relative;
 }
 
-.heading__title {}
+.team__slider-arrows {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.team__slider-arrows-item {
+  display: block;
+  line-height: 0;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+}
+
+.team__slider-arrows-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: var(--primary);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.team__slider-arrows-item path {
+  transition: all .3s;
+}
+
+.team__slider-arrows-item:hover::before{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.team__slider-arrows-item:hover path {
+  fill: var(--white);
+}
+
+.team__slider-prev {
+  margin-right: 24px;
+}
+
+.team__slider-next {}
 
 .team__slider .slick-list {
   margin: 0 -15px;
