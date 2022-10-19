@@ -94,7 +94,6 @@ body {
 }
 
 .main__team {
-  background-color: ;
   background: url("../images/background-shapes/team-bg.svg") no-repeat, var(--gray--200);
   padding: 166px 0 160px;
 }
