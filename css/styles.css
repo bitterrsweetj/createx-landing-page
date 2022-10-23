@@ -94,7 +94,7 @@ body {
 }
 
 .main__team {
-  background: url("../images/background-shapes/team-bg.svg") no-repeat, var(--gray--200);
+  background: url("../images/background-shapes/team-bg.svg") 205px 32px no-repeat, var(--gray--900);
   padding: 166px 0 160px;
 }
 
@@ -527,8 +527,6 @@ body {
   margin-bottom: -46px;
 }
 
-.certificate {}
-
 .certificate__inner {
   display: flex;
   justify-content: space-between;
@@ -709,3 +707,7 @@ body {
   line-height: 160%;
   color: var(--gray--700);
 }
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* TESTIMONIALS  */
