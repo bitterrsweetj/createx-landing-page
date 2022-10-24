@@ -98,12 +98,16 @@ body {
 }
 
 .main__team {
-  background: url("../images/background-shapes/team-bg.svg") 110% 11% no-repeat,var(--gray--200);
+  background: url("../images/background-shapes/team-bg.svg") 110% 11% no-repeat, var(--gray--200);
   padding: 166px 0 0;
 }
 
 .main__testimonials {
-  padding:160px 0 195px;
+  padding: 160px 0 195px;
+}
+
+.main__companies {
+  padding-bottom: 152px;
 }
 
 /* -------------------------------------------------- */
@@ -716,7 +720,7 @@ body {
 /* TESTIMONIALS  */
 
 .testimonials {
-  background: url("../images/background-shapes/testi-bg.svg")  calc(50% + 100px) calc(50% + 40px) no-repeat, var(--gray--200);
+  background: url("../images/background-shapes/testi-bg.svg") calc(50% + 100px) calc(50% + 40px) no-repeat, var(--gray--200);
 }
 
 .testimonials__heading {
@@ -862,11 +866,62 @@ body {
   content: "";
   height: 3px;
   width: 100%;
-  background-color: var(--gray--200);
+  background-color: var(--gray--500);
   border-radius: 3px;
   transition: all .3s;
 }
 
 .testimonials__dots .slick-active button::before {
   background-color: var(--gray--800);
+}
+
+/* =============================================================== */
+/* =============================================================== */
+/* COMPANIES */
+
+.companies {
+  background-color: var(--gray--200);
+}
+
+.companies__inner {
+  position: relative;
+}
+
+.companies__inner::before {
+  content: '';
+  position: absolute;
+  bottom: -110px;
+  left: -270px;
+  width: 90px;
+  height: 90px;
+  background: url("../images/background-shapes/shapes-5.svg");
+}
+
+.companies__heading {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.companies__grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(6, 1fr);
+  gap: 40px 100px;
+}
+
+.companies__grid-link {
+  display: block;
+}
+
+.companies__grid-link img {
+  width: 100%;
+  height: 100%;
+  filter: contrast(0);
+  opacity: .6;
+  transition: all 1.3s;
+}
+
+.companies__grid-link:hover img {
+  filter: contrast(1);
+  opacity: 1;
+  transition: all .3s;
 }
