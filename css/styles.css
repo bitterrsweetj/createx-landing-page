@@ -110,6 +110,10 @@ body {
   padding-bottom: 152px;
 }
 
+.main__program {
+  padding: 116px 0 186px;
+}
+
 /* -------------------------------------------------- */
 
 .header {
@@ -924,4 +928,77 @@ body {
   filter: contrast(1);
   opacity: 1;
   transition: all .3s;
+}
+
+/* ======================================================== */
+/* ======================================================== */
+/* COURSE PROGRAM */
+
+.program {}
+
+.program__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.program__content {}
+
+.program__heading {
+  margin-bottom: 60px;
+}
+
+.program__accordeon {
+  max-width: 600px;
+}
+
+.program__acc-item {
+  margin-bottom: 24px;
+}
+
+
+.program__acc-link {
+  display: block;
+  padding-left: 40px;
+}
+
+.program__acc-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--gray--900);
+  position: relative;
+}
+
+.program__acc-title::before,
+.program__acc-title::after {
+  content: '';
+  left: -40px;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.program__acc-title::after {
+  transform: rotate(90deg);
+  transition: all .3s;
+}
+
+.program__acc-item--active .program__acc-title::after {
+  transform: rotate(0deg);
+}
+
+.program__acc-title span {
+  margin-right: 8px;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.program__acc-text {
+  display: none;
+  margin-top: 16px;
+  line-height: 160%;
 }

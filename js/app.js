@@ -23,11 +23,10 @@ $('.team__slider-next').on('click', function (e) {
   $('.team__slider').slick('slickNext')
 })
 
-
 $('.testimonials__slider').slick({
   arrows: false,
-  dots:true,
-  appendDots: $(".testimonials__dots"),
+  dots: true,
+  appendDots: $('.testimonials__dots'),
   slidesToShow: 1,
   infinite: true,
   waitForAnimate: false,
@@ -41,3 +40,29 @@ $('.testimonials__next').on('click', function (e) {
   e.preventDefault()
   $('.testimonials__slider').slick('slickNext')
 })
+
+// function that allows the items to stay opened
+// 
+// $('.program__acc-link').on('click', function (e) {
+//   e.preventDefault()
+//   $(this).toggleClass('program__acc-item--active')
+//   $(this).children('.program__acc-text').slideToggle()
+// })
+
+$('.program__acc-link').on('click', function (e) {
+  e.preventDefault()
+
+  if ($(this).hasClass('program__acc-item--active')) {
+    $(this).removeClass('program__acc-item--active')
+    $(this).children('.program__acc-text').slideUp()
+
+  }
+  else {
+    $('.program__acc-link').removeClass('program__acc-item--active')
+    $('.program__acc-text').slideUp()
+    $(this).addClass('program__acc-item--active')
+    $(this).children('.program__acc-text').slideDown()
+  }
+
+})
+
