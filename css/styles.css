@@ -1262,15 +1262,13 @@ body {
   letter-spacing: 1px;
 }
 
-.info__socials,
-.footer__socials {
+.info__socials {
   display: flex;
   gap: 32px;
   margin-top: 24px;
 }
 
-.info__socials-link,
-.footer__socials-link {
+.info__socials-link {
   transition: all .3s;
 }
 
@@ -1402,10 +1400,131 @@ body {
 /* ================================================================ */
 /* ================================================================  */
 /* FOOTER */
+
 .footer {
   background-color: var(--gray--900);
+  color: rgb(255, 255, 255, .6);
 }
 
-.footer__socials-link svg path {
-  fill: white;
+.footer__top {
+  padding: 80px 0 60px;
 }
+
+.footer__top-inner {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+
+}
+
+.footer__top-col {}
+
+.footer__top-col:first-child,
+.footer__top-col:last-child {
+  max-width: 280px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.footer__top-text {
+  font-size: 12px;
+  line-height: 150%;
+  margin-bottom: 38px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.footer__socials-item {}
+
+.footer__socials-link {}
+
+.footer__socials-link svg path {
+  fill: #A5A6AB;
+}
+
+.footer__socials-link:hover svg path {
+  fill: var(--white);
+  transition: .3s;
+}
+
+.footer__top-title {
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.footer__top-list {
+  display: flex;
+  flex-direction: column;
+  line-height: 160%;
+  gap: 8px;
+}
+
+.footer__top-item {}
+
+.footer__item-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__item-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__form {}
+
+.footer__form-input {
+  background-color: #393C46;
+  border: 1px solid #61636B;
+  border-radius: 4px;
+  width: 100%;
+  padding: 9px 12px;
+  margin: 12px 0;
+  line-height: 150%;
+  font-size: 12px;
+  position: relative;
+}
+
+.footer__form-input::after {
+  content: '';
+  background: url("../images/icons/arrow-right-mini.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.footer__form-input::placeholder {
+  color: #B0B1B5;
+}
+
+.footer__form-desc {
+  font-size: 10px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+.footer__bottom {
+  background-color: rgb(255, 255, 255, .06);
+}
+
+.footer__bottom-inner {}
+
+.footer__copy {}
+
+.footer__botton-icon {}
+
+.footer__go-top {}
