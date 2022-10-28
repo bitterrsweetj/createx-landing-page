@@ -15,9 +15,9 @@
   --gray--300: #E5E8ED;
   --gray--200: #F4F5F6;
   --btn-gradient: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-  /* --shadow--small: 0px 4px 4px rgba(30, 33, 44, 0.03), 0px 12px 10px rgba(154, 156, 165, 0.04), 0px 30px 24px rgba(154, 156, 165, 0.05), 0px 80px 80px rgba(154, 156, 165, 0.08);
+  --shadow--small: 0px 4px 4px rgba(30, 33, 44, 0.03), 0px 12px 10px rgba(154, 156, 165, 0.04), 0px 30px 24px rgba(154, 156, 165, 0.05), 0px 80px 80px rgba(154, 156, 165, 0.08);
   --shadow--regular: 0px 4px 4px rgba(30, 33, 44, 0.05), 0px 12px 10px rgba(154, 156, 165, 0.08), 0px 30px 24px rgba(154, 156, 165, 0.1), 0px 80px 80px rgba(154, 156, 165, 0.16);
-  --shadow--large: 0px 4px 4px rgba(30, 33, 44, 0.05), 0px 12px 10px rgba(30, 33, 44, 0.08), 0px 26px 24px rgba(30, 33, 44, 0.1), 0px 60px 80px rgba(30, 33, 44, 0.16); */
+  --shadow--large: 0px 4px 4px rgba(30, 33, 44, 0.05), 0px 12px 10px rgba(30, 33, 44, 0.08), 0px 26px 24px rgba(30, 33, 44, 0.1), 0px 60px 80px rgba(30, 33, 44, 0.16);
 }
 
 body {
@@ -118,7 +118,13 @@ body {
   padding-bottom: 200px;
 }
 
-/* -------------------------------------------------- */
+.main__info {
+  padding-bottom: 180px;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* ========================HEADER================================= */
 
 .header {
   display: flex;
@@ -452,7 +458,7 @@ body {
 }
 
 .directions__list-link:hover {
-  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow: var(--shadow--small);
   transform: translateY(-4px);
 }
 
@@ -582,7 +588,7 @@ body {
   height: 500px;
   width: 705px;
   border: 1px solid var(--gray--300);
-  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  box-shadow: var(--shadow--regular);
   border-radius: 4px;
 }
 
@@ -1027,7 +1033,7 @@ body {
 .blog__item:hover {
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow: var(--shadow--small);
   transform: translateY(-4px);
   transition: .3s;
 }
@@ -1173,5 +1179,111 @@ body {
 }
 
 /* ================================================================ */
-/* ================================================================
- */
+/* ================================================================  */
+/* CONTACT INFO*/
+
+.info {}
+
+.info__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.info__content {
+  margin-right: 30px;
+}
+
+.info__heading {
+  margin-bottom: 40px;
+}
+
+.info__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.info__contacts-item {
+  padding-left: 36px;
+  line-height: 150%;
+}
+
+.info__item-top {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gray--700);
+  position: relative;
+}
+
+.info__item-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -36px;
+  width: 24px;
+  height: 24px;
+}
+
+.info__item-link {
+  font-size: 18px;
+  color: var(--gray--900);
+}
+
+.info__item-link:hover {
+  color: var(--primary);
+  transition: .3s;
+}
+
+.info__mail .info__item-top::before {
+  background: url('../images/icons/talk-icon.svg') 0 0 / 100% no-repeat;
+}
+
+.info__phone .info__item-top::before {
+  background: url('../images/icons/phone-icon.svg') 0 0 / 100% no-repeat;
+}
+
+.info__address .info__item-top::before {
+  background: url('../images/icons/pin-icon.svg') 0 0 / 100% no-repeat;
+}
+
+.info__follow-head {
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--gray--900);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info__socials {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.info__socials-link {
+  transition: all .3s;
+}
+
+.info__socials-link>svg path {
+  fill: var(--gray--700);
+}
+
+.info__socials-link:hover>svg path {
+  fill: var(--gray--900);
+  transition: all .3s;
+}
+
+.info__map {
+  height: 412px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: var(--shadow--small);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ================================================================ */
+/* ================================================================  */
+/* CONTACT FORM */

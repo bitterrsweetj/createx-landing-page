@@ -1,3 +1,5 @@
+// adding slider
+
 var mixer = mixitup('.directions__list');
 
 $(document).on('click', '.directions__filter-btn', function () {
@@ -49,6 +51,8 @@ $('.testimonials__next').on('click', function (e) {
 //   $(this).children('.program__acc-text').slideToggle()
 // })
 
+
+// adding toggle section
 $('.program__acc-link').on('click', function (e) {
   e.preventDefault()
 
