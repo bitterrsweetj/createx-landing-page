@@ -1411,16 +1411,23 @@ body {
 }
 
 .footer__top-inner {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
 }
 
-.footer__top-col {}
+.footer__top-col {
+  padding: 0 15px;
+}
 
 .footer__top-col:first-child,
 .footer__top-col:last-child {
-  max-width: 280px;
+  max-width: 310px;
+}
+
+.footer__top-col:last-child .footer__top-title {
+  white-space: normal;
+  margin: 0;
 }
 
 .footer__logo {
@@ -1442,7 +1449,8 @@ body {
 
 .footer__socials-item {}
 
-.footer__socials-link {}
+.footer__socials-link {
+}
 
 .footer__socials-link svg path {
   fill: #A5A6AB;
@@ -1460,6 +1468,7 @@ body {
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 12px;
+  white-space: nowrap;
 }
 
 .footer__top-list {
@@ -1475,6 +1484,11 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+  transition: all .3s;
+}
+.footer__item-link:hover {
+  color: var(--white);
 }
 
 .footer__item-link svg {
@@ -1482,29 +1496,40 @@ body {
   height: 16px;
 }
 
-.footer__form {}
-
-.footer__form-input {
+.footer__form-items {
   background-color: #393C46;
   border: 1px solid #61636B;
   border-radius: 4px;
-  width: 100%;
-  padding: 9px 12px;
   margin: 12px 0;
+  display: flex;
+  padding-left: 12px;
+}
+
+.footer__form-input {
+  width: 100%;
   line-height: 150%;
   font-size: 12px;
   position: relative;
+  color: #fff;
+  background-color: transparent;
 }
 
-.footer__form-input::after {
+.footer__form-btn {
+  background-color: transparent;
+  padding: 10px 12px;
+}
+
+.footer__form-btn:hover::after {
+  transform: scale(1.1);
+}
+
+.footer__form-btn::after {
   content: '';
+  display: block;
   background: url("../images/icons/arrow-right-mini.svg");
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 16px;
   height: 16px;
-  display: block;
+  transition: all .3s;
 }
 
 .footer__form-input::placeholder {
@@ -1521,10 +1546,37 @@ body {
   background-color: rgb(255, 255, 255, .06);
 }
 
-.footer__bottom-inner {}
+.footer__bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: var(--white);
+  line-height: 150%;
+  font-size: 12px;
+}
 
-.footer__copy {}
+.footer__copyright  {
+  display: flex;
+  align-items: center;
+}
 
-.footer__botton-icon {}
+.footer__botton-icon {
+  display: inline-block;
+  margin: 0 4px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/heart-icon.svg") 0 0 / 100% 100% no-repeat;
+}
 
-.footer__go-top {}
+.footer__go-top {
+  font-size: 14px;
+  color: #A9ABAF;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.footer__go-top:hover {
+  color: var(--white);
+}

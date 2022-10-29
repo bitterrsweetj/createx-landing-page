@@ -67,6 +67,15 @@ $('.program__acc-link').on('click', function (e) {
     $(this).addClass('program__acc-item--active')
     $(this).children('.program__acc-text').slideDown()
   }
+});
 
-})
+//adding scroll to anchors
+  $(".header__nav-list a, .header__top-btn, .footer__go-top").on("click", function (e) {
+    e.preventDefault()
+    var id = $(this).attr('href'),
+    top = $(id).offset().top - 100
+    $('body,html').animate({ scrollTop: top }, 800);
+  });
+
+
 
