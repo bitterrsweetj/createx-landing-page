@@ -70,12 +70,30 @@ $('.program__acc-link').on('click', function (e) {
 });
 
 //adding scroll to anchors
-  $(".header__nav-list a, .header__top-btn, .footer__go-top").on("click", function (e) {
-    e.preventDefault()
-    var id = $(this).attr('href'),
+$(".header__nav-list a, .header__top-btn, .footer__go-top").on("click", function (e) {
+  e.preventDefault()
+  var id = $(this).attr('href'),
     top = $(id).offset().top - 100
-    $('body,html').animate({ scrollTop: top }, 800);
-  });
+  $('body,html').animate({ scrollTop: top }, 800);
+});
+
+//animation of the burger menu button
+
+setInterval(() => {
+  if ($(window).scrollTop() > 100 && $('.header__top').hasClass('header__top--open') === false) {
+    $('.burger').addClass('burger--follow');
+  } else {
+    $('.burger').removeClass('burger--follow');
+  }
+}, 0)
+
+//animation of the side navbar
+
+$('.burger, .overlay').on('click', function (e) {
+  e.preventDefault();
+  $('.header__top').toggleClass('header__top--open');
+  $('.overlay').toggleClass('overlay--show');
+})
 
 
 
