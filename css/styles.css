@@ -799,6 +799,7 @@ html, body {
 .testimonials__slider-wrapper {
   padding: 0 50px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .testimonials__slider {
@@ -917,7 +918,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 20px;
   gap: 12px;
 }
 
@@ -1637,6 +1638,13 @@ html, body {
     max-width: 376px;
   }
 
+  /* ----------------------------------------------- */
+
+  .companies__grid {
+    grid-template: repeat(3, auto) / repeat(5, 1fr);
+    gap: 30px 80px;
+  }
+
 }
 
 /* ================================================================ */
@@ -1756,7 +1764,8 @@ html, body {
   }
 
   .heading {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    padding: 0;
   }
 
   .heading__title {
@@ -1815,6 +1824,14 @@ html, body {
   .directions__link-content {
     padding: 15px;
   }
+
+   /* ----------------------------------------------- */
+
+  .companies__grid {
+    grid-template: repeat(3, auto) / repeat(4, 1fr);
+    gap: 30px 60px;
+  }
+
 }
 
 /* ================================================================  */
@@ -1822,6 +1839,11 @@ html, body {
 /* MEDIA 700px */
 @media (max-width: 700px) {
 
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  /* ---------------------------------------------- */
   .about__createx {
     margin-bottom: 80px;
   }
@@ -1849,6 +1871,35 @@ html, body {
   .certificate__heading {
     text-align: center;
   }
+
+  /* ------------------------------------------------ */
+  .testimonials__slider-wrapper {
+    padding: 0;
+    margin-bottom: 0px;
+  }
+
+  .testimonials__slide {
+    padding: 30px 15px;
+  }
+
+  .testimonials__arrow {
+    display: none;
+  }
+
+  .testimonials__slide-inner {
+    padding-left: 40px;
+  }
+
+  .testimonials__quote {
+    font-size: inherit;
+  }
+  /* ----------------------------------------------- */
+
+  .companies__grid {
+    grid-template: repeat(4, auto) / repeat(3, 1fr);
+    gap: 20px 40px;
+  }
+
 }
 
 /* ================================================================  */
@@ -1895,9 +1946,17 @@ html, body {
   .directions__list-item--empty {
     display: none;
   }
+
   /* ---------------------------------------------- */
   .team__slider-arrows {
     display: none;
+  }
+
+  /* ---------------------------------------------- */
+  .testimonials__quote::before {
+    height: 20px;
+    width: 25px;
+    left: -40px;
   }
 }
 
@@ -1910,6 +1969,7 @@ html, body {
     min-width: none;
     left: 0;
   }
+
   /* ------------------------------------------ */
   .certificate__logos {
     flex-wrap: wrap;

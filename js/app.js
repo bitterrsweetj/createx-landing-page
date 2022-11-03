@@ -67,6 +67,13 @@ $('.testimonials__slider').slick({
   slidesToShow: 1,
   infinite: false,
   waitForAnimate: false,
+  responsive: [
+    {
+      breakpoint: 700,
+      settings: {
+      }
+    },
+  ]
 })
 
 $('.testimonials__prev').on('click', function (e) {
