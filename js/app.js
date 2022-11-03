@@ -11,9 +11,44 @@ $(document).on('click', '.directions__filter-btn', function () {
 $('.team__slider').slick({
   arrows: false,
   slidesToShow: 4,
-  infinite: true,
+  infinite: false,
   draggable: false,
   waitForAnimate: false,
+  responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 2.5,
+        draggable:true
+      }
+    },
+    {
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 475,
+      settings: {
+        slidesToShow: 1.5,
+      }
+    },
+    {
+      breakpoint: 375,
+      settings: {
+        slidesToShow: 1,
+        dots: true,
+        appendDots: $('.team__dots'),
+      }
+    },
+  ]
 })
 
 $('.team__slider-prev').on('click', function (e) {
@@ -30,7 +65,7 @@ $('.testimonials__slider').slick({
   dots: true,
   appendDots: $('.testimonials__dots'),
   slidesToShow: 1,
-  infinite: true,
+  infinite: false,
   waitForAnimate: false,
 })
 
